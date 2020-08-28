@@ -1,1 +1,5 @@
 theme: jekyll-theme-cayman
+title: GSoC 2020 App Inventor Project VCE
+
+github:
+  is_project_page: false
