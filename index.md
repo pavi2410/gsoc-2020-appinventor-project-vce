@@ -1,5 +1,6 @@
-# Intro
+[GSoC Project Page](https://summerofcode.withgoogle.com/projects/#4749864480538624)
 
+# About the Project
 A Visible Component Extension or VCE is a type of extension which is able to provide Mock preview of what a component running on a real device would like. It leverages the existing mechanism set in place to write Mocks for the internal components.
 
 # Background
@@ -14,7 +15,7 @@ A Visible Component Extension or VCE is a type of extension which is able to pro
 - [iFrame-based VCE SDK](https://gist.github.com/pavi2410/18195e3e6096aa257aa0341524d0da9e)
 
 # Documentation
-https://docs.google.com/document/d/17uMiZ5RuwC3u9J1e2oVUIGNPVHA8Mp2umDka6pXJ244/edit?usp=sharing
+https://docs.google.com/document/d/17uMiZ5RuwC3u9J1e2oVUIGNPVHA8Mp2umDka6pXJ244/edit?usp=sharing `WIP`
 
 # Sample Extensions I made for testing
 - [SimpleLabel](https://github.com/pavi2410/vce-samples/tree/simplelabel) (mimicks the built-in Label component)
