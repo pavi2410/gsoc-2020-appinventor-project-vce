@@ -1,7 +1,5 @@
 [<img alt="GSoC Project Page" src="https://img.shields.io/badge/-GSoC Project Page-blueviolet" height=25 />](https://summerofcode.withgoogle.com/projects/#4749864480538624) [<img alt="GSoC 2020 Proposal for Visible Component Extensions" src="https://img.shields.io/badge/-GSoC 2020 Proposal-orange" height=25 />](https://docs.google.com/document/d/14FwGfVMQcyDReeWCPSqFbMWSbW6ZsYbl3mRBsPEzBnQ/edit?usp=sharing) [<img alt="Design Document" src="https://img.shields.io/badge/-Design Document-red" height=25 />](https://docs.google.com/document/d/1BV1lGCNtYjP0H0dxUyLcVPnO91ztke-1VAH4EnRdDYc/edit?usp=sharing) [<img alt="Documentation" src="https://img.shields.io/badge/Documentation-WIP-555?labelColor=brightgreen" height=25 />](https://docs.google.com/document/d/17uMiZ5RuwC3u9J1e2oVUIGNPVHA8Mp2umDka6pXJ244/edit?usp=sharing) [<img alt="Community Feedback" src="https://img.shields.io/badge/-Community Feedback-darkblue" height=25 />](https://community.appinventor.mit.edu/t/gsoc-request-for-feedback-on-design-doc-for-visible-component-extension/9705?u=pavi2410)
 
-{:toc}
-
 # About the Project
 Extensions in App inventor are currently limited to just non-visible components. Due to this, extensions can't be dragged into the mock form designer. To work around this, extension developers have to get a reference to a visible component as parent under which they create UI views. This, however, defeats the idea of App Inventor, which allows the users to create their UI of their apps using the concept of WYSIWYG.
 
@@ -42,6 +40,11 @@ The 3-month long journey has suddenly felt short :( I enjoyed working for the or
     - Start commit: [Added BuildTools](https://github.com/mit-cml/appinventor-sources/commit/61541e0c5a41f693005369a1a74f404e5aef0c02)
     - Last commit: [JUST MADE THIS WORK UP AND RUNNING](https://github.com/mit-cml/appinventor-sources/commit/30a3e1b2a0dbe7ecc5544d90fc07d42e2bcb1b91)
   - [iFrame-based VCE SDK](https://gist.github.com/pavi2410/18195e3e6096aa257aa0341524d0da9e)
+  
+### Apart from the scope of this project, I made these little contributions
+  - [PR #2275 | URL encode faultData in bug report](https://github.com/mit-cml/appinventor-sources/pull/2275) ![GitHub PR detail](https://img.shields.io/github/pulls/detail/state/mit-cml/appinventor-sources/2275)
+  - [PR #2263 | Exclude markdown files from AndroidRuntime.jar](https://github.com/mit-cml/appinventor-sources/pull/2263) ![GitHub PR detail](https://img.shields.io/github/pulls/detail/state/mit-cml/appinventor-sources/2263)
+  - [PR #2252 | Make OdeLog to print to brower console also](https://github.com/mit-cml/appinventor-sources/pull/2252) ![GitHub PR detail](https://img.shields.io/github/pulls/detail/state/mit-cml/appinventor-sources/2252)
 
 # Sample Extensions I Made for Testing
 - [SimpleLabel](https://github.com/pavi2410/vce-samples/tree/simplelabel) - mimicks the built-in Label component
