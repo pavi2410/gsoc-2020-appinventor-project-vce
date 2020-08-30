@@ -1,7 +1,11 @@
 [<img title="GSoC Project Page" src="https://img.shields.io/badge/-GSoC Project Page-brightgreen" height=25 />](https://summerofcode.withgoogle.com/projects/#4749864480538624) [<img title="GSoC 2020 Proposal for Visible Component Extensions" src="https://img.shields.io/badge/-GSoC 2020 Proposal-brightgreen" height=25 />](https://docs.google.com/document/d/14FwGfVMQcyDReeWCPSqFbMWSbW6ZsYbl3mRBsPEzBnQ/edit?usp=sharing) [<img title="Design Document" src="https://img.shields.io/badge/-Design Document-brightgreen" height=25 />](https://docs.google.com/document/d/1BV1lGCNtYjP0H0dxUyLcVPnO91ztke-1VAH4EnRdDYc/edit?usp=sharing) [<img title="Documentation" src="https://img.shields.io/badge/Documentation-WIP-555?labelColor=brightgreen" height=25 />](https://docs.google.com/document/d/17uMiZ5RuwC3u9J1e2oVUIGNPVHA8Mp2umDka6pXJ244/edit?usp=sharing)
 
 # About the Project
-A Visible Component Extension or VCE is a type of extension which is able to provide Mock preview of what a component running on a real device would like. It leverages the existing mechanism set in place to write Mocks for the internal components. The goal of this to make VCE look and feel similar to a regular visible component, and provide a safe and secure way of getting a VCE running in the browser.
+Extensions in App inventor are currently limited to just non-visible components. Due to this, extensions can't be dragged into the mock form designer. To work around this, extension developers have to get a reference to a visible component as parent under which they create UI views. This, however, defeats the idea of App Inventor, which allows the users to create their UI of their apps using the concept of WYSIWYG.
+
+My proposal to solve this problem is to create a generic `MockVisibleExtension`, a subclass of `MockComponent`, which can be dragged into the designer. The extension will have (almost) all the capabilities of a visible component. Further, this allows the extension to be placed under a container component under which the extension can create its views. Thus, this allows the users to view a clear hierarchy of their app's UI when using "visible" extensions.
+
+A **V**isible **C**omponent **E**xtension (or VCE) is a type of extension which is able to provide Mock preview of what a component running on a real device would like. It leverages the existing mechanism set in place to write Mocks for the internal components. **The goal of this project is to make VCE look and feel similar to a regular visible component, and provide a safe and secure way of getting a VCE running in the browser.**
 
 # Background
 
@@ -20,14 +24,14 @@ Susan and Evan helped me a lot. They are very knowledgeable, friendly and suppor
 ### My Exterience with Google Summer of Code 2020 <img alt="GSoC logo" src="https://summerofcode.withgoogle.com/static/img/summer-of-code-logo.svg" height=50 />
 The 3-month long journey has suddenly felt short :( I enjoyed working for the organisation of my choice. I am very grateful to have this opportunity. 
 
-# My contributions
+# My Contributions
 - [PR #2223 @ mit-cml/appinventor-sources](https://github.com/mit-cml/appinventor-sources/pull/2223)
 - [Branch with the new iFrame-based sandbox implementation](https://github.com/pavi2410/appinventor-sources/tree/mvce3) ![](https://img.shields.io/badge/-WIP-555)
   - Start commit: [Added BuildTools](https://github.com/mit-cml/appinventor-sources/commit/61541e0c5a41f693005369a1a74f404e5aef0c02)
   - Last commit: [JUST MADE THIS WORK UP AND RUNNING](https://github.com/mit-cml/appinventor-sources/commit/30a3e1b2a0dbe7ecc5544d90fc07d42e2bcb1b91)
 - [iFrame-based VCE SDK](https://gist.github.com/pavi2410/18195e3e6096aa257aa0341524d0da9e)
 
-# Sample Extensions I made for testing
+# Sample Extensions I Made for Testing
 - [SimpleLabel](https://github.com/pavi2410/vce-samples/tree/simplelabel) - mimicks the built-in Label component
   - Mock code
     ```js
