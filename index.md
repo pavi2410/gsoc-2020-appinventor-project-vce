@@ -8,7 +8,7 @@ A Visible Component Extension or VCE is a type of extension which is able to pro
 ### About Me
 My name is [Pavitra Golchha](https://pavi2410.me). I'm a CSE student. I live in india. I'm passionate about computers and programming. I love my weapons - Kotlin, JavaScript, Python. I like to play badminton, listen to music and learn new stuffs.
 
-### About MIT App Inventor ![](https://appinventor.mit.edu/images/logo.png)
+### About MIT App Inventor ![App Inventor logo](https://appinventor.mit.edu/images/logo.png)
 [App Inventor](https://appinventor.mit.edu/images/logo.png) is a web-based Android app maker. It allows anyone to create an app without any prior coding knowledge. It features a drag-and-drop UI designer, and a Blocks editor. It is mostly a learning tool that introduces one to computer science and programming concepts using its blocks model, based on [Blockly](https://developers.google.com/blockly/). It empowers students to turn their ideas into reality as it did for me :)
 
 ### My Experience with MIT App Inventor Open Source Project
@@ -17,7 +17,7 @@ I am an App Inventor user since 2015, an extension dev and an open source contri
 ## My Mentors
 Susan and Evan helped me a lot. They are very knowledgeable, friendly and supportive. They helped me with every big and small problems I faced. I am very fortunate to have them as my mentors.
 
-### My Exterience with Google Summer of Code 2020
+### My Exterience with Google Summer of Code 2020 <img alt="GSoC logo" src="https://summerofcode.withgoogle.com/static/img/summer-of-code-logo.svg" height=50 />
 The 3-month long journey has suddenly felt short :( I enjoyed working for the organisation of my choice. I am very grateful to have this opportunity. 
 
 # My contributions
@@ -104,7 +104,7 @@ The 3-month long journey has suddenly felt short :( I enjoyed working for the or
   
   This was the greatest challenge of this project. I had no clue how to solve that. Upon research, I found a handful of solutions that others have developed to mitigate the same technical difficulty. But some or the other had issues of their own. So, we finally decided to build a iFrame-based sandbox system which uses browser window messages communication to allow us to talk to iFrame and let third-party Mock authors securely serve and run their Mock previews.
 
-- Getting GWT to work with dynamically loaded external JavaScript code
+- Getting the GWT client to work with dynamically loaded external JavaScript code
 
 # Future Work
 - Can't create more than one instance of a VCE ![](https://img.shields.io/badge/-WIP-555)
