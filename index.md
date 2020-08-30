@@ -102,7 +102,7 @@ The 3-month long journey has suddenly felt short :( I enjoyed working for the or
 # Technical Challenges
 - Creating JavaScript sandbox to securely evaluate third-party extensions' Mock
   
-  This was the greatest challenge of this project. I had no clue how to solve that. Upon research, I found a handful of solutions that others have developed to mitigate the same technical difficulty. But some or the other had issues of their own. So, we finally decided to build a iFrame-based sandbox system which uses browser window messages communication to allow us to talk to iFrame and let third-party Mock acuthors securely serve and run their Mock previews.
+  This was the greatest challenge of this project. I had no clue how to solve that. Upon research, I found a handful of solutions that others have developed to mitigate the same technical difficulty. But some or the other had issues of their own. So, we finally decided to build a iFrame-based sandbox system which uses browser window messages communication to allow us to talk to iFrame and let third-party Mock authors securely serve and run their Mock previews.
 
 - Getting GWT to work with dynamically loaded external JavaScript code
 
