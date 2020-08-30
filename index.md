@@ -25,11 +25,15 @@ Susan and Evan helped me a lot. They are very knowledgeable, friendly and suppor
 The 3-month long journey has suddenly felt short :( I enjoyed working for the organisation of my choice. I am very grateful to have this opportunity. 
 
 # My Contributions
-- [PR #2223 @ mit-cml/appinventor-sources](https://github.com/mit-cml/appinventor-sources/pull/2223)
-- [Branch with the new iFrame-based sandbox implementation](https://github.com/pavi2410/appinventor-sources/tree/mvce3) ![](https://img.shields.io/badge/-WIP-555)
-  - Start commit: [Added BuildTools](https://github.com/mit-cml/appinventor-sources/commit/61541e0c5a41f693005369a1a74f404e5aef0c02)
-  - Last commit: [JUST MADE THIS WORK UP AND RUNNING](https://github.com/mit-cml/appinventor-sources/commit/30a3e1b2a0dbe7ecc5544d90fc07d42e2bcb1b91)
-- [iFrame-based VCE SDK](https://gist.github.com/pavi2410/18195e3e6096aa257aa0341524d0da9e)
+
+### Prototype I
+  - [PR #2223 @ mit-cml/appinventor-sources](https://github.com/mit-cml/appinventor-sources/pull/2223)
+  
+### Prototype II
+  - [Branch with the new iFrame-based sandbox implementation](https://github.com/pavi2410/appinventor-sources/tree/mvce3) ![WIP](https://img.shields.io/badge/-WIP-555)
+    - Start commit: [Added BuildTools](https://github.com/mit-cml/appinventor-sources/commit/61541e0c5a41f693005369a1a74f404e5aef0c02)
+    - Last commit: [JUST MADE THIS WORK UP AND RUNNING](https://github.com/mit-cml/appinventor-sources/commit/30a3e1b2a0dbe7ecc5544d90fc07d42e2bcb1b91)
+  - [iFrame-based VCE SDK](https://gist.github.com/pavi2410/18195e3e6096aa257aa0341524d0da9e)
 
 # Sample Extensions I Made for Testing
 - [SimpleLabel](https://github.com/pavi2410/vce-samples/tree/simplelabel) - mimicks the built-in Label component
@@ -102,6 +106,28 @@ The 3-month long journey has suddenly felt short :( I enjoyed working for the or
     ```
   - Demo
     ![Working of Cowsay VCE](assets/images/Cowsay_demo.png)
+    
+# Implementation
+
+### Prototype I: Script element-based
+Initially, I had no idea how could I securely load Mocks. But, eventually, I and my mentors decided to leave that part of the project for the later time, and focus on other things. I worked on creating a `MockScriptsManager` (MSM) which is the heart of this project. This class had the responsibility to init and destroy itself when a project loads or is closed, and load, unload, upgrade Mock components. When a VCE is imported, MSM loads its respective `Mock<component name>.js` and injects a script element with Mock code inside it. When the code inside the script element runs, a Mock calls `MockComponentRegistry` (MCR) to register the Mock class factory along with its type name. On component instantiation, the MockComponent is created using the Mock class factory which is retrieved from the MCR. This worked pretty well leaving the security aspect of this approach.
+
+### Prototype II: iFrame-based sandbox
+The goal of the project is to develop a mechanism to load untrusted JS code from third-party extensions in a secure manner. I knew that the script-element based implementation is not all safe option to go with in the production. I researched a lot on creation of a safe environment to execute JS code, and came across various projects like [Google Caja](https://developers.google.com/caja/), [remote-dom](https://github.com/wix/remote-dom), [jsdom](https://github.com/jsdom/jsdom), Web Workers, [Realms](https://github.com/Agoric/realms-shim), etc. It was known from the beginning that we could iFrames to securely isolate untrusted code, but I didn't know how the implementation would go. But, after the second month, I finally decided to work with iFrames. Most of the code was reused from Prototype I. I developed an asynchronous messaging system which makes communication between iFrames and the top window (where the App Inventor client runs) possible.
+
+> Message protocol used for communication between iFrames and the GWT client
+> ```
+> {
+>   "action": "string",
+>   "args": [ "args to accompany the action" ],
+>   "type": "component type",
+>   "uuid": "uuid of each instance"
+> }
+> ```
+
+I wanted to reuse the existing Mock API for this as well, so I created a VCE SDK which uses the async messaging system under the hood. The VCE SDK resides on the server-side, so it can be easily updated and maintained.
+
+When this worked, it made my day 🥳🎉 I was full of joy that day 😁 I couldn't believe myself that this magically worked!
 
 # Technical Challenges
 - Creating JavaScript sandbox to securely evaluate third-party extensions' Mock
@@ -111,8 +137,14 @@ The 3-month long journey has suddenly felt short :( I enjoyed working for the or
 - Getting the GWT client to work with dynamically loaded external JavaScript code
 
 # Future Work
-- Can't create more than one instance of a VCE ![](https://img.shields.io/badge/-WIP-555)
-- Reloading the page causes a runtime error, making VCE implementation useless ![](https://img.shields.io/badge/-WIP-555)
+- Can't create more than one instance of a VCE ![WIP](https://img.shields.io/badge/-WIP-555)
+- Reloading the page causes a runtime error, making VCE implementation useless ![WIP](https://img.shields.io/badge/-WIP-555)
 - Implement callback messaging system with iframe
+- Support version upgrades
 - Mock Container support
 - More and more rigorous testing.
+
+# Conclusion
+I could say that this summer and the lockdown due to COVID-19 in my country was well spent. I enjoyed my time working on this project. I would continue to work on this project after the GSoC program ends as the project is still not complete. I learned many things along my way. The weekly meetings we did with other participants and mentors in the org was an amazing opportunity for me to showcase my work to others, talk and discuss problems with my mentors.
+
+_Last updated 30 Aug, 2020_
