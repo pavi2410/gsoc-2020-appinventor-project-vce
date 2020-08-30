@@ -14,7 +14,7 @@ My name is [Pavitra Golchha](https://pavi2410.me). I'm a CSE student. I live in 
 ### My Experience with MIT App Inventor Open Source Project
 I am an App Inventor user since 2015, an extension dev and an open source contributor. I was already involved with this organisation which has helped me in a lot of ways - I knew the people in the team, know how the project and most of the code works. I am thankful to them for accepting my proposal.
 
-## My Mentors
+### My Mentors
 Susan and Evan helped me a lot. They are very knowledgeable, friendly and supportive. They helped me with every big and small problems I faced. I am very fortunate to have them as my mentors.
 
 ### My Exterience with Google Summer of Code 2020 <img alt="GSoC logo" src="https://summerofcode.withgoogle.com/static/img/summer-of-code-logo.svg" height=50 />
