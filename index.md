@@ -28,6 +28,12 @@ The 3-month long journey has suddenly felt short :( I enjoyed working for the or
 
 ### Prototype I
   - [PR #2223 @ mit-cml/appinventor-sources](https://github.com/mit-cml/appinventor-sources/pull/2223)
+    - Added `isContainer`, `hasCustomMock` properties to @DesignerComponent
+    - Added the ability to load Mock scripts for external components
+    - Added the ability to instantiate Mocks from a JS file
+    - Added a fallback implementation for external components which do not provide a custom Mock
+    - Added a registry to hold Mock component factories
+    - Added a MockScriptsManager which is responsible for loading, unloading of Mocks
   
 ### Prototype II
   - [Branch with the new iFrame-based sandbox implementation](https://github.com/pavi2410/appinventor-sources/tree/mvce3) ![WIP](https://img.shields.io/badge/-WIP-555)
