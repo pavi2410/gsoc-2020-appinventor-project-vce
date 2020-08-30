@@ -1,8 +1,4 @@
-[GSoC Project Page](https://summerofcode.withgoogle.com/projects/#4749864480538624)
-
-[GSoC 2020 Proposal for Visible Component Extensions](https://docs.google.com/document/d/14FwGfVMQcyDReeWCPSqFbMWSbW6ZsYbl3mRBsPEzBnQ/edit?usp=sharing)
-
-[Design Document](https://docs.google.com/document/d/1BV1lGCNtYjP0H0dxUyLcVPnO91ztke-1VAH4EnRdDYc/edit?usp=sharing)
+[<img title="GSoC Project Page" src="https://img.shields.io/badge/-GSoC Project Page-brightgreen" height=25 />](https://summerofcode.withgoogle.com/projects/#4749864480538624) [<img title="GSoC 2020 Proposal for Visible Component Extensions" src="https://img.shields.io/badge/-GSoC 2020 Proposal-brightgreen" height=25 />](https://docs.google.com/document/d/14FwGfVMQcyDReeWCPSqFbMWSbW6ZsYbl3mRBsPEzBnQ/edit?usp=sharing) [<img title="Design Document" src="https://img.shields.io/badge/-Design Document-brightgreen" height=25 />](https://docs.google.com/document/d/1BV1lGCNtYjP0H0dxUyLcVPnO91ztke-1VAH4EnRdDYc/edit?usp=sharing) [<img title="Documentation" src="https://img.shields.io/badge/Documentation-WIP-555?labelColor=brightgreen" height=25 />](https://docs.google.com/document/d/17uMiZ5RuwC3u9J1e2oVUIGNPVHA8Mp2umDka6pXJ244/edit?usp=sharing)
 
 # About the Project
 A Visible Component Extension or VCE is a type of extension which is able to provide Mock preview of what a component running on a real device would like. It leverages the existing mechanism set in place to write Mocks for the internal components. The goal of this to make VCE look and feel similar to a regular visible component, and provide a safe and secure way of getting a VCE running in the browser.
@@ -23,16 +19,13 @@ The 3-month long journey has suddenly felt short :( I enjoyed working for the or
 
 # My contributions
 - [PR #2223 @ mit-cml/appinventor-sources](https://github.com/mit-cml/appinventor-sources/pull/2223)
-- [Branch with the new iFrame-based sandbox implementation](https://github.com/pavi2410/appinventor-sources/tree/mvce3) `WIP`
+- [Branch with the new iFrame-based sandbox implementation](https://github.com/pavi2410/appinventor-sources/tree/mvce3) ![](https://img.shields.io/badge/-WIP-555)
   - Start commit: [Added BuildTools](https://github.com/mit-cml/appinventor-sources/commit/61541e0c5a41f693005369a1a74f404e5aef0c02)
   - Last commit: [JUST MADE THIS WORK UP AND RUNNING](https://github.com/mit-cml/appinventor-sources/commit/30a3e1b2a0dbe7ecc5544d90fc07d42e2bcb1b91)
 - [iFrame-based VCE SDK](https://gist.github.com/pavi2410/18195e3e6096aa257aa0341524d0da9e)
 
-# Documentation
-https://docs.google.com/document/d/17uMiZ5RuwC3u9J1e2oVUIGNPVHA8Mp2umDka6pXJ244/edit?usp=sharing `WIP`
-
 # Sample Extensions I made for testing
-- [SimpleLabel](https://github.com/pavi2410/vce-samples/tree/simplelabel) (mimicks the built-in Label component)
+- [SimpleLabel](https://github.com/pavi2410/vce-samples/tree/simplelabel) - mimicks the built-in Label component
   - Mock code
     ```js
     class MockSimpleLabel extends MockVisibleExtension {
@@ -64,9 +57,41 @@ https://docs.google.com/document/d/17uMiZ5RuwC3u9J1e2oVUIGNPVHA8Mp2umDka6pXJ244/
     ```
   - Demo
     ![Working of SimpleLabel VCE](assets/images/SimpleLabel_demo.png)
-- [Cowsay](https://github.com/pavi2410/vce-samples/tree/cowsay) (this extension displays text said by cow)
+    
+- [Cowsay](https://github.com/pavi2410/vce-samples/tree/cowsay) - this extension displays text said by cow; uses script element-based implementation
   - Mock code
     ```js
+    class MockCowsay extends MockVisibleExtension {
+      static TYPE = "Cowsay"
+
+      constructor(editor) {
+        super(editor, MockCowsay.TYPE)
+
+        this.label = document.createElement("pre")
+
+        this.initComponent(this.label)
+      }
+
+      onCreateFromPalette() {
+        this.changeProperty("Say", "Moo")
+      }
+
+      onPropertyChange(propertyName, newValue) {
+        super.onPropertyChange(propertyName, newValue)
+
+        switch (propertyName) {
+          case "Say":
+            this.label.innerText = cowsay(newValue)
+            break
+        }
+      }
+
+      static create(editor) {
+        return new MockCowsay(editor)
+      }
+    }
+
+    MockComponentRegistry.register(MockCowsay.TYPE, MockCowsay.create)
     ```
   - Demo
     ![Working of Cowsay VCE](assets/images/Cowsay_demo.png)
@@ -79,8 +104,8 @@ https://docs.google.com/document/d/17uMiZ5RuwC3u9J1e2oVUIGNPVHA8Mp2umDka6pXJ244/
 - Getting GWT to work with dynamically loaded external JavaScript code
 
 # Future Work
-- Can't create more than one instance of a VCE `WIP`
-- Reloading the page causes a runtime error, making VCE implementation useless `WIP`
+- Can't create more than one instance of a VCE ![](https://img.shields.io/badge/-WIP-555)
+- Reloading the page causes a runtime error, making VCE implementation useless ![](https://img.shields.io/badge/-WIP-555)
 - Implement callback messaging system with iframe
 - Mock Container support
 - More and more rigorous testing.
