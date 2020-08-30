@@ -42,9 +42,9 @@ The 3-month long journey has suddenly felt short :( I enjoyed working for the or
   - [iFrame-based VCE SDK](https://gist.github.com/pavi2410/18195e3e6096aa257aa0341524d0da9e)
   
 ### Apart from the scope of this project, I made these little contributions
-  - [PR #2275 | URL encode faultData in bug report](https://github.com/mit-cml/appinventor-sources/pull/2275) ![GitHub PR detail](https://img.shields.io/github/pulls/detail/state/mit-cml/appinventor-sources/2275)
-  - [PR #2263 | Exclude markdown files from AndroidRuntime.jar](https://github.com/mit-cml/appinventor-sources/pull/2263) ![GitHub PR detail](https://img.shields.io/github/pulls/detail/state/mit-cml/appinventor-sources/2263)
-  - [PR #2252 | Make OdeLog to print to brower console also](https://github.com/mit-cml/appinventor-sources/pull/2252) ![GitHub PR detail](https://img.shields.io/github/pulls/detail/state/mit-cml/appinventor-sources/2252)
+  - [PR #2275 \| URL encode faultData in bug report](https://github.com/mit-cml/appinventor-sources/pull/2275) ![GitHub PR detail](https://img.shields.io/github/pulls/detail/state/mit-cml/appinventor-sources/2275)
+  - [PR #2263 \| Exclude markdown files from AndroidRuntime.jar](https://github.com/mit-cml/appinventor-sources/pull/2263) ![GitHub PR detail](https://img.shields.io/github/pulls/detail/state/mit-cml/appinventor-sources/2263)
+  - [PR #2252 \| Make OdeLog to print to brower console also](https://github.com/mit-cml/appinventor-sources/pull/2252) ![GitHub PR detail](https://img.shields.io/github/pulls/detail/state/mit-cml/appinventor-sources/2252)
 
 # Sample Extensions I Made for Testing
 - [SimpleLabel](https://github.com/pavi2410/vce-samples/tree/simplelabel) - mimicks the built-in Label component
