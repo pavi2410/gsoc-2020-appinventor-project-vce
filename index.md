@@ -5,16 +5,19 @@ A Visible Component Extension or VCE is a type of extension which is able to pro
 
 # Background
 
-## About Me
-My name is [Pavitra Golchha](https://pavi2410.me). I'm a CSE student. I live in india. I'm passionate about computers and programming. I love my weapons - Kotlin, JavaScript, Python. I like to play badminton, listen to music and learn new stuffs. 
+### About Me
+My name is [Pavitra Golchha](https://pavi2410.me). I'm a CSE student. I live in india. I'm passionate about computers and programming. I love my weapons - Kotlin, JavaScript, Python. I like to play badminton, listen to music and learn new stuffs.
 
-## My Experience with MIT App Inventor Open Source Project
+### About MIT App Inventor ![](https://appinventor.mit.edu/images/logo.png)
+[App Inventor](https://appinventor.mit.edu/images/logo.png) is a web-based Android app maker. It allows anyone to create an app without any prior coding knowledge. It features a drag-and-drop UI designer, and a Blocks editor. It is mostly a learning tool that introduces one to computer science and programming concepts using its blocks model, based on [Blockly](https://developers.google.com/blockly/). It empowers students to turn their ideas into reality as it did for me :)
+
+### My Experience with MIT App Inventor Open Source Project
 I am an App Inventor user since 2015, an extension dev and an open source contributor. I was already involved with this organisation which has helped me in a lot of ways - I knew the people in the team, know how the project and most of the code works. I am thankful to them for accepting my proposal.
 
 ## My Mentors
-Susan and Evan helped me a lot. They are very knowledgeable, friendly and supportive. They helped me with every big or small problems I face. I am very fortunate to have them as my mentors.
+Susan and Evan helped me a lot. They are very knowledgeable, friendly and supportive. They helped me with every big and small problems I faced. I am very fortunate to have them as my mentors.
 
-## My Exterience with Google Summer of Code 2020
+### My Exterience with Google Summer of Code 2020
 The 3-month long journey has suddenly felt short :( I enjoyed working for the organisation of my choice. I am very grateful to have this opportunity. 
 
 # My contributions
